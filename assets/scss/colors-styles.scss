@@ -1,0 +1,168 @@
+$beigeClaro: #FEE5BF;
+$beigeoscuro: #E0B86D;
+$negro: #333333;
+$grisOscuro: #616162;
+$grisClaro: #F5F5F5;
+$grisClaro2: #C5C5C5;
+$blanco: #FFFFFF;
+
+.negro{
+    color:$negro;
+}
+nav{
+    z-index: 5;
+    position: fixed;
+    box-shadow: 3px -12px 20px 0px #0b325e;
+}
+
+.containerCabecera{
+    padding-top:50px;
+}
+
+.bannerImage{
+    position: relative;
+    background-image: url("/assets/img/Consultorio-Pablo-Giordana-banner.png");
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 250px 0px 200px;
+}
+
+.botonBanner--tratamientos{
+    border-radius: 4px ;
+    border: 1px solid $blanco;
+    outline: none;
+    background-color: $blanco;
+
+    &:hover{
+        background-color:$beigeoscuro;
+        border: 1px solid $beigeoscuro;
+    }
+}
+
+.botonBanner--contacto{
+    border: 1px solid $blanco;
+    border-radius: 4px ;
+    outline: none;
+    background-color: transparent;
+    &:hover{
+        background-color:$beigeoscuro;
+        border: 1px solid $beigeoscuro;
+    }
+}
+
+.botonSobreMi{
+    border-radius: 4px ;
+    outline: none;
+    border:none;
+    background-color:$grisOscuro;
+    &:hover{
+        background-color:$negro;
+        outline: none;
+        border:none;
+    }
+}
+
+.botonBanner--terapia{
+    border: 1px solid $beigeoscuro;
+    border-radius: 4px ;
+    outline: none;
+    background-color: $beigeoscuro;
+    &:hover{
+        background-color:$negro;
+        border: 1px solid $negro;
+    }
+}
+
+.botonContacto{
+    border: 1px solid $beigeoscuro;
+    border-radius: 4px ;
+    outline: none;
+    background-color: $beigeoscuro;
+    &:hover{
+        background-color:$negro;
+        border: 1px solid $negro;
+    }
+}
+
+.botonContacto--footer{
+    color:$negro;
+    border: 1px solid $beigeoscuro;
+    border-radius: 4px ;
+    outline: none;
+    background-color: $beigeoscuro;
+    &:hover{
+        background-color:$negro;
+        border: 1px solid $negro;
+        color: white;
+    }
+}
+
+.backgroundSobreMi{
+    background-color:$grisClaro2;
+}
+
+.backgroundTratamientos{
+    background-color:$beigeClaro;
+}
+
+.cardTratamiento{
+    width:200px;
+    height:200px;
+    color:$grisOscuro;
+    background-color:$beigeoscuro;
+}
+
+.circleFeature{
+    height:150px;
+    width:150px;
+    background-color:$beigeoscuro;
+}
+
+.fa-size{
+    font-size: 60px;
+}
+
+.fa-size--secondary{
+    font-size: 45px;
+}
+
+
+
+// ///////////////////////////
+
+.contactoCaja--left{
+    background-color:#FEE5BF;
+}
+
+.contactoCaja--right{
+    background-color:white;
+    position: relative;
+    right: -434px;
+    top: -334px;
+    width: 690px;
+}
+
+.contactoCaja{
+    background-color:#616162;
+}
+
+footer{
+    background-color:#333333;
+}
+
+.tratamientosCaja{
+    background-color:#FEE5BF;
+}
+
+.buttonNav{
+    border-radius: 5px;
+    border:none;
+    outline:none;
+    background-color:white;
+    color: $negro;
+    &:hover{
+        color:white;
+        background-color:$beigeoscuro;
+    }
+}

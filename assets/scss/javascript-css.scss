@@ -1,0 +1,44 @@
+// .navbar-fixed-top.scrolled {
+//     background-color: #fff !important;
+//     transition: background-color 200ms linear;
+// }
+
+// .navbar-fixed-top{ transition:background-color 200ms linear; }
+
+@import "colors-styles";
+
+// Ansiedad
+.cardTratamiento--ansiedad--details,
+.cardTratamiento--ansiedad:hover .cardTratamiento--ansiedad--pre {
+    display: none;
+}
+.cardTratamiento--ansiedad:hover .cardTratamiento--ansiedad--details {
+    display: block;
+}
+
+// Pareja
+.cardTratamiento--pareja--details,
+.cardTratamiento--pareja:hover .cardTratamiento--pareja--pre {
+    display: none;
+}
+.cardTratamiento--pareja:hover .cardTratamiento--pareja--details {
+    display: block;
+}
+
+// Consumo
+.cardTratamiento--consumo--details,
+.cardTratamiento--consumo:hover .cardTratamiento--consumo--pre {
+    display: none;
+}
+.cardTratamiento--consumo:hover .cardTratamiento--consumo--details {
+    display: block;
+}
+
+// Proyeccion
+.cardTratamiento--proyeccion--details,
+.cardTratamiento--proyeccion:hover .cardTratamiento--proyeccion--pre {
+    display: none;
+}
+.cardTratamiento--proyeccion:hover .cardTratamiento--proyeccion--details {
+    display: block;
+}

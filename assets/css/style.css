@@ -1,0 +1,307 @@
+.negro {
+  color: #333333; }
+
+nav {
+  z-index: 5;
+  position: fixed;
+  box-shadow: 3px -12px 20px 0px #0b325e; }
+
+.containerCabecera {
+  padding-top: 50px; }
+
+.bannerImage {
+  position: relative;
+  background-image: url("/assets/img/Consultorio-Pablo-Giordana-banner.png");
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 250px 0px 200px; }
+
+.botonBanner--tratamientos {
+  border-radius: 4px;
+  border: 1px solid #FFFFFF;
+  outline: none;
+  background-color: #FFFFFF; }
+  .botonBanner--tratamientos:hover {
+    background-color: #E0B86D;
+    border: 1px solid #E0B86D; }
+
+.botonBanner--contacto {
+  border: 1px solid #FFFFFF;
+  border-radius: 4px;
+  outline: none;
+  background-color: transparent; }
+  .botonBanner--contacto:hover {
+    background-color: #E0B86D;
+    border: 1px solid #E0B86D; }
+
+.botonSobreMi {
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  background-color: #616162; }
+  .botonSobreMi:hover {
+    background-color: #333333;
+    outline: none;
+    border: none; }
+
+.botonBanner--terapia {
+  border: 1px solid #E0B86D;
+  border-radius: 4px;
+  outline: none;
+  background-color: #E0B86D; }
+  .botonBanner--terapia:hover {
+    background-color: #333333;
+    border: 1px solid #333333; }
+
+.botonContacto {
+  border: 1px solid #E0B86D;
+  border-radius: 4px;
+  outline: none;
+  background-color: #E0B86D; }
+  .botonContacto:hover {
+    background-color: #333333;
+    border: 1px solid #333333; }
+
+.botonContacto--footer {
+  color: #333333;
+  border: 1px solid #E0B86D;
+  border-radius: 4px;
+  outline: none;
+  background-color: #E0B86D; }
+  .botonContacto--footer:hover {
+    background-color: #333333;
+    border: 1px solid #333333;
+    color: white; }
+
+.backgroundSobreMi {
+  background-color: #C5C5C5; }
+
+.backgroundTratamientos {
+  background-color: #FEE5BF; }
+
+.cardTratamiento {
+  width: 200px;
+  height: 200px;
+  color: #616162;
+  background-color: #E0B86D; }
+
+.circleFeature {
+  height: 150px;
+  width: 150px;
+  background-color: #E0B86D; }
+
+.fa-size {
+  font-size: 60px; }
+
+.fa-size--secondary {
+  font-size: 45px; }
+
+.contactoCaja--left {
+  background-color: #FEE5BF; }
+
+.contactoCaja--right {
+  background-color: white;
+  position: relative;
+  right: -434px;
+  top: -334px;
+  width: 690px; }
+
+.contactoCaja {
+  background-color: #616162; }
+
+footer {
+  background-color: #333333; }
+
+.tratamientosCaja {
+  background-color: #FEE5BF; }
+
+.buttonNav {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: #333333; }
+  .buttonNav:hover {
+    color: white;
+    background-color: #E0B86D; }
+
+.negro {
+  color: #333333; }
+
+nav {
+  z-index: 5;
+  position: fixed;
+  box-shadow: 3px -12px 20px 0px #0b325e; }
+
+.containerCabecera {
+  padding-top: 50px; }
+
+.bannerImage {
+  position: relative;
+  background-image: url("/assets/img/Consultorio-Pablo-Giordana-banner.png");
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 250px 0px 200px; }
+
+.botonBanner--tratamientos {
+  border-radius: 4px;
+  border: 1px solid #FFFFFF;
+  outline: none;
+  background-color: #FFFFFF; }
+  .botonBanner--tratamientos:hover {
+    background-color: #E0B86D;
+    border: 1px solid #E0B86D; }
+
+.botonBanner--contacto {
+  border: 1px solid #FFFFFF;
+  border-radius: 4px;
+  outline: none;
+  background-color: transparent; }
+  .botonBanner--contacto:hover {
+    background-color: #E0B86D;
+    border: 1px solid #E0B86D; }
+
+.botonSobreMi {
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  background-color: #616162; }
+  .botonSobreMi:hover {
+    background-color: #333333;
+    outline: none;
+    border: none; }
+
+.botonBanner--terapia {
+  border: 1px solid #E0B86D;
+  border-radius: 4px;
+  outline: none;
+  background-color: #E0B86D; }
+  .botonBanner--terapia:hover {
+    background-color: #333333;
+    border: 1px solid #333333; }
+
+.botonContacto {
+  border: 1px solid #E0B86D;
+  border-radius: 4px;
+  outline: none;
+  background-color: #E0B86D; }
+  .botonContacto:hover {
+    background-color: #333333;
+    border: 1px solid #333333; }
+
+.botonContacto--footer {
+  color: #333333;
+  border: 1px solid #E0B86D;
+  border-radius: 4px;
+  outline: none;
+  background-color: #E0B86D; }
+  .botonContacto--footer:hover {
+    background-color: #333333;
+    border: 1px solid #333333;
+    color: white; }
+
+.backgroundSobreMi {
+  background-color: #C5C5C5; }
+
+.backgroundTratamientos {
+  background-color: #FEE5BF; }
+
+.cardTratamiento {
+  width: 200px;
+  height: 200px;
+  color: #616162;
+  background-color: #E0B86D; }
+
+.circleFeature {
+  height: 150px;
+  width: 150px;
+  background-color: #E0B86D; }
+
+.fa-size {
+  font-size: 60px; }
+
+.fa-size--secondary {
+  font-size: 45px; }
+
+.contactoCaja--left {
+  background-color: #FEE5BF; }
+
+.contactoCaja--right {
+  background-color: white;
+  position: relative;
+  right: -434px;
+  top: -334px;
+  width: 690px; }
+
+.contactoCaja {
+  background-color: #616162; }
+
+footer {
+  background-color: #333333; }
+
+.tratamientosCaja {
+  background-color: #FEE5BF; }
+
+.buttonNav {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: #333333; }
+  .buttonNav:hover {
+    color: white;
+    background-color: #E0B86D; }
+
+.cardTratamiento--ansiedad--details,
+.cardTratamiento--ansiedad:hover .cardTratamiento--ansiedad--pre {
+  display: none; }
+
+.cardTratamiento--ansiedad:hover .cardTratamiento--ansiedad--details {
+  display: block; }
+
+.cardTratamiento--pareja--details,
+.cardTratamiento--pareja:hover .cardTratamiento--pareja--pre {
+  display: none; }
+
+.cardTratamiento--pareja:hover .cardTratamiento--pareja--details {
+  display: block; }
+
+.cardTratamiento--consumo--details,
+.cardTratamiento--consumo:hover .cardTratamiento--consumo--pre {
+  display: none; }
+
+.cardTratamiento--consumo:hover .cardTratamiento--consumo--details {
+  display: block; }
+
+.cardTratamiento--proyeccion--details,
+.cardTratamiento--proyeccion:hover .cardTratamiento--proyeccion--pre {
+  display: none; }
+
+.cardTratamiento--proyeccion:hover .cardTratamiento--proyeccion--details {
+  display: block; }
+
+@media (max-width: 991px) {
+  .dots__terapia--desktop {
+    display: none; } }
+
+@media (min-width: 991px) {
+  .dots__terapia--mobile {
+    display: none; } }
+
+@media (min-width: 0px) and (max-width: 820px) {
+  .containerCabecera {
+    padding-top: 0px; }
+  nav {
+    display: none; } }
+
+@media (min-width: 0px) and (max-width: 1210px) {
+  .contactoCaja--desktop {
+    display: none; }
+  .contactoCaja--mobile {
+    display: block; } }
+
+@media (min-width: 1210px) {
+  .contactoCaja--mobile {
+    display: none; } }
