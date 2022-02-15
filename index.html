@@ -30,36 +30,39 @@
 
 <body>
 
-    <nav id="home" class="container-fluid bg-light">
+    <nav class="container-fluid bg-light">
         <div class="row mx-5 sexo d-flex justify-content-between align-items-center">
             <div class="col-3">
                 <h3 class="negro">LIC. PABLO GIORDANA</h3>
             </div>
             <div>
-                <button class="buttonNav p-3">HOME</button>
-                <button class="buttonNav p-3">SOBRE MI</button>
-                <button class="buttonNav p-3">SERVICIOS</button>
-                <button class="buttonNav p-3">EXTERIOR</button>
-                <button class="buttonNav p-3">CONTACTO</button>
+                <button class="buttonNav buttonNav--home p-3">HOME</button>
+                <button class="buttonNav buttonNav--about p-3">SOBRE MI</button>
+                <button class="buttonNav buttonNav--servicios p-3">SERVICIOS</button>
+                <button class="buttonNav buttonNav--exterior p-3">EXTERIOR</button>
+                <button class="buttonNav buttonNav--contacto p-3">CONTACTO</button>
             </div>
         </div>
     </nav>
 
+    <button class="buttonNav--home scrollTop__button"><span><i class="fa-solid fa-angle-up"></i></span></button>
 
     <!-- Cabecera -->
-    <div class="container-fluid containerCabecera text-light">
+    <div id="home" class="container-fluid containerCabecera text-light">
         <div class="row text-center d-flex justify-content-center align-items-center bannerImage">
             <div class="col-lg-12">
                 <h1 class="col-lg-12">Lic. Pablo Giordana</h1>
                 <p class="col-lg-12 lead">Consultorio Psicológico</p>
-                <button class="botonBanner--tratamientos col-lg-2 m-1 py-2 lead"><span>Tratamientos</span></button>
-                <button class="botonBanner--contacto col-lg-2 m-1 py-2 text-light lead"><span>Contacto</span></button>
+                <button
+                    class="botonBanner--tratamientos buttonNav--servicios col-lg-2 m-1 py-2 lead"><span>Tratamientos</span></button>
+                <button
+                    class="botonBanner--contacto buttonNav--contacto col-lg-2 m-1 py-2 text-light lead"><span>Contacto</span></button>
             </div>
         </div>
     </div>
 
     <!-- Sobre mi -->
-    <div id="sobre mi" class="container">
+    <div id="about" class="container">
         <div class="row d-flex justify-content-center align-items-start">
             <div class="col-lg-12">
                 <h2 class="text-center m-5 ">Sobre mí</h2>
@@ -241,7 +244,8 @@
     <!-- Boton Contacto -->
     <div class="container my-3">
         <div class="row d-flex justify-content-center align-items-center">
-            <button class="col-lg-10 botonBanner--terapia py-3 m-5 text-light"><span>QUIERO EMPEZAR TERAPIA
+            <button class="col-lg-10 botonBanner--terapia buttonNav--contacto py-3 m-5 text-light"><span>QUIERO EMPEZAR
+                    TERAPIA
                     ONLINE</span></button>
         </div>
     </div>
@@ -268,18 +272,24 @@
                     <button class="botonContacto text-light"><span><i class="fa-brands fa-facebook"></i></span></button>
                     <button class="botonContacto text-light"><span><i
                                 class="fa-brands fa-instagram"></i></span></button>
-                    <button class="botonContacto text-light"><span><i class="fa-brands fa-linkedin"></i></span></button>
+                    <a target="_blank"
+                        href="https://www.linkedin.com/in/pablo-giordana-88256414/?originalSubdomain=ar"><button
+                            class="botonContacto text-light"><span><i
+                                    class="fa-brands fa-linkedin"></i></span></button></a>
                 </div>
             </div>
             <div class="contactoCaja--right p-5 lead">
                 <h3 class="col-12 ">Escribime por WhatsApp</h3>
                 <p class="col-12">Sabemos que estás en un momento difícil. Por eso, ¡respondemos con rapidez!</p>
-                <button class="botonContacto text-light p-2">
-                    <span class="px-3">
-                        <i class="fa-brands fa-whatsapp fa-xl pr-2"></i>
-                        Ir a WhatsApp
-                    </span>
-                </button>
+                <a
+                    href="https://api.whatsapp.com/send?phone=541167443264&text=Hola%20Lic.%20Pablo%20Giordana!%20Me%20interesar%C3%ADa%20saber%20m%C3%A1s%20acerca%20de%20">
+                    <button class="botonContacto text-light p-2">
+                        <span class="px-3">
+                            <i class="fa-brands fa-whatsapp fa-xl pr-2"></i>
+                            Ir a WhatsApp
+                        </span>
+                    </button>
+                </a>
             </div>
         </div>
     </section>
@@ -312,21 +322,26 @@
                         <i class="fa-brands fa-instagram"></i>
                     </span>
                 </button>
-                <button class="botonContacto text-light">
-                    <span>
-                        <i class="fa-brands fa-linkedin"></i>
-                    </span>
-                </button>
+                <a target="_blank" href="https://www.linkedin.com/in/pablo-giordana-88256414/?originalSubdomain=ar">
+                    <button class="botonContacto text-light">
+                        <span>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </span>
+                    </button>
+                </a>
             </div>
             <div class="col-12 p-5 bg-light text-center lead">
                 <h3 class="col-12 ">Escribime por WhatsApp</h3>
                 <p class="col-12">Sabemos que estás en un momento difícil. Por eso, ¡respondemos con rapidez!</p>
-                <button class="botonContacto text-light p-2">
-                    <span class="px-3">
-                        <i class="fa-brands fa-whatsapp fa-xl pr-2"></i>
-                        Ir a WhatsApp
-                    </span>
-                </button>
+                <a
+                    href="https://api.whatsapp.com/send?phone=541167443264&text=Hola%20Lic.%20Pablo%20Giordana!%20Me%20interesar%C3%ADa%20saber%20m%C3%A1s%20acerca%20de%20">
+                    <button class="botonContacto text-light p-2">
+                        <span class="px-3">
+                            <i class="fa-brands fa-whatsapp fa-xl pr-2"></i>
+                            Ir a WhatsApp
+                        </span>
+                    </button>
+                </a>
             </div>
         </div>
     </div>
@@ -362,7 +377,9 @@
                 <p>Seguime</p>
                 <button class="botonContacto--footer"><span><i class="fa-brands fa-facebook"></i></span></button>
                 <button class="botonContacto--footer"><span><i class="fa-brands fa-instagram"></i></span></button>
-                <button class="botonContacto--footer"><span><i class="fa-brands fa-linkedin"></i></span></button>
+                <a target="_blank"
+                    href="https://www.linkedin.com/in/pablo-giordana-88256414/?originalSubdomain=ar"><button
+                        class="botonContacto--footer"><span><i class="fa-brands fa-linkedin"></i></span></button></a>
             </div>
         </div>
     </div>
@@ -385,15 +402,13 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 
     <!-- Script de Jquery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
     <!-- Script de Bootstrap -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/bootstrap.bundle.min.js"></script>
 
     <!-- Script de Javascript-->
-    <script src="javascript/index.js"></script>
+    <script src="./assets/js/index.js"></script>
 </body>
 </body>
 

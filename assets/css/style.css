@@ -282,6 +282,22 @@ footer {
 .cardTratamiento--proyeccion:hover .cardTratamiento--proyeccion--details {
   display: block; }
 
+.scrollTop__button {
+  border: none;
+  outline: none;
+  z-index: 4;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  width: 45px;
+  height: 45px;
+  color: white;
+  border-radius: 5px;
+  background-color: #333333; }
+
+.scrollTop__button:active {
+  background-color: #333333; }
+
 @media (max-width: 991px) {
   .dots__terapia--desktop {
     display: none; } }
