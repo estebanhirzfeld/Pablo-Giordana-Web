@@ -12,7 +12,8 @@
 .cardTratamiento--ansiedad:hover .cardTratamiento--ansiedad--pre {
     display: none;
 }
-.cardTratamiento--ansiedad:hover .cardTratamiento--ansiedad--details {
+.cardTratamiento--ansiedad:hover .cardTratamiento--ansiedad--details,
+.cardTratamiento--ansiedad:active .cardTratamiento--ansiedad--details {
     display: block;
 }
 
@@ -21,7 +22,8 @@
 .cardTratamiento--pareja:hover .cardTratamiento--pareja--pre {
     display: none;
 }
-.cardTratamiento--pareja:hover .cardTratamiento--pareja--details {
+.cardTratamiento--pareja:hover .cardTratamiento--pareja--details, 
+.cardTratamiento--pareja:active .cardTratamiento--pareja--details {
     display: block;
 }
 
@@ -30,7 +32,8 @@
 .cardTratamiento--consumo:hover .cardTratamiento--consumo--pre {
     display: none;
 }
-.cardTratamiento--consumo:hover .cardTratamiento--consumo--details {
+.cardTratamiento--consumo:hover .cardTratamiento--consumo--details,
+.cardTratamiento--consumo:active .cardTratamiento--consumo--details {
     display: block;
 }
 
@@ -39,7 +42,8 @@
 .cardTratamiento--proyeccion:hover .cardTratamiento--proyeccion--pre {
     display: none;
 }
-.cardTratamiento--proyeccion:hover .cardTratamiento--proyeccion--details {
+.cardTratamiento--proyeccion:hover .cardTratamiento--proyeccion--details,
+.cardTratamiento--proyeccion:active .cardTratamiento--proyeccion--details  {
     display: block;
 }
 
