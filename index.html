@@ -1,420 +1,529 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Animate CSS -->
-    <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- AOS Animate CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            beige: '#FEE5BF',
+                            gold: '#E0B86D',
+                            dark: '#333333',
+                            gray: '#616162',
+                            lightGray: '#F5F5F5',
+                            silver: '#C5C5C5',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+                        serif: ['Georgia', 'serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
     <!-- Fontawesome -->
-    <script src="https://kit.fontawesome.com/592dce0dd2.js" crossorigin="anonymous"></script> <!-- Font Awesome Kit -->
-
-    <!-- Nuestro CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/592dce0dd2.js" crossorigin="anonymous"></script>
 
     <link rel="icon" href="assets/img/Pablo-Giordana-Favicon.png" type="image/png">
     <title>Pablo Giordana</title>
 
-    <!-- meta description... 👇👇👇👇-->
     <meta name="description"
-        content="🙌 Mi nombre es Pablo Giordana y hace más de 20 años que soy psicólogo. A lo largo de mi experiencia
-        profesional me fui desarrollando en varios ámbitos pero siempre orienté mi perspectiva de abordaje
-        empatizando con la persona que consulta ☑️">
+        content="🙌 Mi nombre es Pablo Giordana y hace más de 20 años que soy psicólogo. A lo largo de mi experiencia profesional me fui desarrollando en varios ámbitos pero siempre orienté mi perspectiva de abordaje empatizando con la persona que consulta ☑️">
 
+    <style>
+        /* Custom Utilities if needed */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    </style>
 </head>
 
-<body>
+<body class="bg-brand-lightGray text-brand-dark font-sans antialiased overflow-x-hidden">
 
-    <nav class="container-fluid bg-light">
-        <div class="row mx-5 sexo d-flex justify-content-between align-items-center">
-            <div class="col-3">
-                <h3 class="negro">LIC. PABLO GIORDANA</h3>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-nav shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#home" class="block">
+                        <h3 class="text-xl font-bold tracking-widest text-brand-dark uppercase">Lic. Pablo Giordana</h3>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home"
+                            class="text-sm font-medium hover:text-brand-gold transition-colors duration-300">HOME</a>
+                        <a href="#about"
+                            class="text-sm font-medium hover:text-brand-gold transition-colors duration-300">SOBRE
+                            MÍ</a>
+                        <a href="#servicios"
+                            class="text-sm font-medium hover:text-brand-gold transition-colors duration-300">SERVICIOS</a>
+                        <a href="#exterior"
+                            class="text-sm font-medium hover:text-brand-gold transition-colors duration-300">EXTERIOR</a>
+                        <a href="#contacto"
+                            class="px-5 py-2.5 rounded-md bg-brand-dark text-white text-sm font-medium hover:bg-brand-gold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">CONTACTO</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-brand-gray hover:text-brand-dark hover:bg-gray-100 focus:outline-none"
+                        aria-controls="mobile-menu" aria-expanded="false"
+                        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
-            <div>
-                <button class="buttonNav buttonNav--home p-3">HOME</button>
-                <button class="buttonNav buttonNav--about p-3">SOBRE MI</button>
-                <button class="buttonNav buttonNav--servicios p-3">SERVICIOS</button>
-                <button class="buttonNav buttonNav--exterior p-3">EXTERIOR</button>
-                <button class="buttonNav buttonNav--contacto p-3">CONTACTO</button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-white/95 backdrop-blur-md" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-100">
+                <a href="#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-brand-gold hover:bg-gray-50">HOME</a>
+                <a href="#about"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-brand-gold hover:bg-gray-50">SOBRE
+                    MÍ</a>
+                <a href="#servicios"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-brand-gold hover:bg-gray-50">SERVICIOS</a>
+                <a href="#exterior"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-brand-gold hover:bg-gray-50">EXTERIOR</a>
+                <a href="#contacto"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-brand-gold hover:bg-gray-50">CONTACTO</a>
             </div>
         </div>
     </nav>
 
-    <button class="buttonNav--home scrollTop__button"><span><i class="fa-solid fa-angle-up"></i></span></button>
+    <!-- Scroll to Top Button -->
+    <a href="#home"
+        class="fixed bottom-8 right-8 z-40 p-3 bg-brand-gold text-white rounded-full shadow-lg hover:bg-brand-dark transition-all duration-300 opacity-80 hover:opacity-100 transform hover:-translate-y-1">
+        <i class="fa-solid fa-angle-up"></i>
+    </a>
 
-    <!-- Cabecera -->
-    <div id="home" class="container-fluid containerCabecera text-light">
-        <div class="row text-center d-flex justify-content-center align-items-center bannerImage">
-            <div class="col-lg-12">
-                <h1 class="col-lg-12">Lic. Pablo Giordana</h1>
-                <p class="col-lg-12 lead">Consultorio Psicológico</p>
-                <button
-                    class="botonBanner--tratamientos text-dark buttonNav--servicios col-lg-2 m-1 py-2 lead"><span>Tratamientos</span></button>
-                <button
-                    class="botonBanner--contacto buttonNav--contacto col-lg-2 m-1 py-2 text-light lead"><span>Contacto</span></button>
-            </div>
+    <!-- Hero Section -->
+    <div id="home" class="relative w-full h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/img/Consultorio-Pablo-Giordana-banner.png" alt="Consultorio Lic. Pablo Giordana"
+                class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-brand-dark/60"></div>
         </div>
-    </div>
 
-    <!-- Sobre mi -->
-    <div id="about" class="container">
-        <div class="row d-flex justify-content-center align-items-start">
-            <div class="col-lg-12">
-                <h2 class="text-center m-5 ">Sobre mí</h2>
-            </div>
-            <div class="col-lg-6 mb-5">
-                <img class="col-lg-12" src="assets/img/Psicologo-Pablo-Giordana-Foto.png" alt="">
-            </div>
-            <div class="col-lg-6 mb-5">
-                <p class="lead">
-                    Mi nombre es Pablo Giordana y hace más de 20 años que soy psicólogo. A lo largo de mi experiencia
-                    profesional me fui desarrollando en varios ámbitos pero siempre orienté mi perspectiva de abordaje
-                    empatizando con la persona que consulta. Nunca me sentí del todo de acuerdo con ese perfil
-                    profesional distante, callado, misterioso y críptico, que anula todo tipo de cercanía. Una distancia
-                    óptima es operativa para trabajar, pero no tiene que impedir algún tipo de empatía y de solidaridad
-                    que resuene en la escucha de lo que se nos plantea. Esta mirada la fui construyendo a partir de mi
-                    estudio de la escuela sistémica, quien propone que los problemas no son “de alguien” sino “de una
-                    situación”. Los problemas los padece alguien pero se los entiende mejor dentro del contexto en el
-                    que tienen lugar.
-                </p>
-                <a target="_blank" href="https://www.linkedin.com/in/pablo-giordana-88256414/?originalSubdomain=ar">
-                    <button class="col-12 botonSobreMi py-3 text-light">
-                        <span>
-                            <i class="fa-brands fa-xl fa-linkedin"></i>
-                            Conocé más sobre mi en LinkedIn
-                        </span>
-                    </button>
+        <!-- Content -->
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16 animate-fade-in-up">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight drop-shadow-md">
+                Lic. Pablo Giordana
+            </h1>
+            <p class="text-xl md:text-2xl text-brand-beige font-light mb-10 tracking-wide">
+                Consultorio Psicológico
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#servicios"
+                    class="px-8 py-4 rounded bg-white text-brand-dark font-semibold tracking-wide hover:bg-brand-gold hover:text-white transition-all duration-300 shadow-xl w-full sm:w-auto min-w-[160px]">
+                    TRATAMIENTOS
+                </a>
+                <a href="#contacto"
+                    class="px-8 py-4 rounded border-2 border-white text-white font-semibold tracking-wide hover:bg-white hover:text-brand-dark transition-all duration-300 shadow-xl w-full sm:w-auto min-w-[160px]">
+                    CONTACTO
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- Tratamientos -->
-    <section id="servicios" class="tratamientosCaja pb-5">
-        <div class="container">
-            <div class="row d-flex justify-content-center align-items-center">
-                <div class="col-lg-12">
-                    <h2 class="text-center m-5">Tratamientos</h2>
-                </div>
-                <div class="cardTratamiento cardTratamiento--ansiedad m-2 p-5 text-center col-12 col-lg-5">
-                    <div class="cardTratamiento--ansiedad--pre">
-                        <i class="fa-solid fa-size my-2 fa-cloud-showers-heavy"></i>
-                        <h3>Ansiedad</h3>
+    <!-- Section: Sobre Mí -->
+    <section id="about" class="py-24 bg-brand-lightGray relative overflow-hidden">
+        <!-- Decorative background element -->
+        <div
+            class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-beige rounded-full mix-blend-multiply filter blur-3xl opacity-50 opacity-20">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Image Column -->
+                <div class="relative group" data-aos="fade-right">
+                    <div
+                        class="absolute -inset-4 bg-brand-gold/20 rounded-xl blur-lg transition duration-500 group-hover:bg-brand-gold/30">
                     </div>
-                    <div class="cardTratamiento--ansiedad--details">
-                        <p>Entiendo que el abordaje terapéutico de la ansiedad es un problema de estrategias. Pocas
-                            cosas causan más ansiedad que saber que lo que uno está por intentar hacer, para resolver su
-                            síntoma, en realidad ya fracasó antes, una y otra vez, y que lo volverá a hacer. </p>
-                    </div>
+                    <img src="assets/img/Psicologo-Pablo-Giordana-Foto.png" alt="Lic. Pablo Giordana"
+                        class="relative rounded-lg shadow-2xl w-full object-cover transform transition duration-500 group-hover:scale-[1.01]">
                 </div>
 
-                <div class="cardTratamiento cardTratamiento--pareja m-2 p-5 text-center col-12 col-lg-5">
-                    <div class="cardTratamiento--pareja--pre">
-                        <i class="fa-solid fa-size my-2 fa-heart-crack"></i>
-                        <h3>Pareja</h3>
-                    </div>
-                    <div class="cardTratamiento--pareja--details">
-                        <p>Cuando se presenta un primer conflicto importante y se intenta resolverlo cuando sabremos si
-                            se podrá formar un vínculo de pareja estable o no. </p>
-                    </div>
-                </div>
+                <!-- Text Column -->
+                <div class="space-y-8" data-aos="fade-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6 relative inline-block">
+                        Sobre mí
+                        <span class="absolute bottom-0 left-0 w-1/3 h-1 bg-brand-gold rounded-full"></span>
+                    </h2>
 
-                <div class="cardTratamiento cardTratamiento--consumo m-2 p-5 text-center col-12 col-lg-5">
-                    <div class="cardTratamiento--consumo--pre">
-                        <i class="fa-solid fa-size my-2 fa-heart-crack"></i>
-                        <h3>Consumos Problemáticos</h3>
+                    <div class="prose prose-lg text-brand-gray text-lg leading-relaxed space-y-6">
+                        <p>
+                            Mi nombre es Pablo Giordana y hace más de 20 años que soy psicólogo. A lo largo de mi
+                            experiencia profesional me fui desarrollando en varios ámbitos pero siempre orienté mi
+                            perspectiva de abordaje empatizando con la persona que consulta.
+                        </p>
+                        <p>
+                            Nunca me sentí del todo de acuerdo con ese perfil profesional distante, callado, misterioso
+                            y críptico, que anula todo tipo de cercanía. Una distancia óptima es operativa para
+                            trabajar, pero no tiene que impedir algún tipo de empatía y de solidaridad que resuene en la
+                            escucha de lo que se nos plantea.
+                        </p>
+                        <p>
+                            Esta mirada la fui construyendo a partir de mi estudio de la escuela sistémica, quien
+                            propone que los problemas no son “de alguien” sino “de una situación”. Los problemas los
+                            padece alguien pero se los entiende mejor dentro del contexto en el que tienen lugar.
+                        </p>
                     </div>
-                    <div class="cardTratamiento--consumo--details">
-                        <p>Cuando nos encontramos envueltos en una situación de consumo problemático, en lugar de
-                            hacernos las difíciles preguntas que nos llevan a crecer, a conocernos y a enriquecer
-                            nuestra vida, recurrimos a un hábito que las tapa y “nos alivia”. </p>
-                    </div>
-                </div>
 
-                <div class="cardTratamiento cardTratamiento--proyeccion m-2 p-5 text-center col-12 col-lg-5">
-                    <div class="cardTratamiento--proyeccion--pre">
-                        <i class="fa-solid fa-size my-2 fa-rocket"></i>
-                        <h3>Proyección Personal</h3>
-                    </div>
-                    <div class="cardTratamiento--proyeccion--details">
-                        <p>No hace falta sufrir un problema psicológico para hacer terapia.
-                            Realizar una serie de encuentros ayuda a formarnos para el disfrute o el autoconocimiento,
-                            el cual permite acceder a un desarrollo personal, recreativo, laboral, emocional,
-                            satisfactorio.</p>
-                    </div>
+                    <a href="https://www.linkedin.com/in/pablo-giordana-88256414/?originalSubdomain=ar" target="_blank"
+                        class="inline-flex items-center px-6 py-3 border border-brand-dark text-brand-dark rounded hover:bg-brand-dark hover:text-white transition-all duration-300 group">
+                        <i class="fa-brands fa-linkedin text-xl mr-3 group-hover:text-brand-gold transition-colors"></i>
+                        <span class="font-medium">Conocé más sobre mí en LinkedIn</span>
+                    </a>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Metodologia -->
-        <div class="container">
-            <div class="row d-flex justify-content-center align-items-center">
-                <div class="col-lg-12">
-                    <h2 class="text-center m-5">¿Cómo trabajo?</h2>
-                    <p class="lead text-center">
-                        Mi propuesta inicial es tener tres o cuatro entrevistas en las que me armo una idea general, un
-                        mapa de la situación expuesta y luego hago una pequeña devolución en la cual planteo qué
-                        entiendo yo qué se podría trabajar y acuerdo esto con quien me consulta, armando juntos un plan
-                        de trabajo, metas, plazos objeciones, etc.
+    <!-- Section: Tratamientos -->
+    <section id="servicios" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Tratamientos</h2>
+                <div class="w-24 h-1 bg-brand-gold mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Card 1: Ansiedad -->
+                <div
+                    class="group bg-brand-lightGray p-10 rounded-xl hover:shadow-2xl hover:bg-brand-beige/30 transition-all duration-300 border border-transparent hover:border-brand-beige">
+                    <div
+                        class="w-16 h-16 bg-brand-beige rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-cloud-showers-heavy text-3xl text-brand-dark"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-4 group-hover:text-brand-gold transition-colors">
+                        Ansiedad</h3>
+                    <p class="text-brand-gray leading-relaxed">
+                        Entiendo que el abordaje terapéutico de la ansiedad es un problema de estrategias. Pocas cosas
+                        causan más ansiedad que saber que lo que uno está por intentar hacer, para resolver su síntoma,
+                        en realidad ya fracasó antes, una y otra vez, y que lo volverá a hacer.
+                    </p>
+                </div>
+
+                <!-- Card 2: Pareja -->
+                <div
+                    class="group bg-brand-lightGray p-10 rounded-xl hover:shadow-2xl hover:bg-brand-beige/30 transition-all duration-300 border border-transparent hover:border-brand-beige">
+                    <div
+                        class="w-16 h-16 bg-brand-beige rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-heart-crack text-3xl text-brand-dark"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-4 group-hover:text-brand-gold transition-colors">
+                        Pareja</h3>
+                    <p class="text-brand-gray leading-relaxed">
+                        Cuando se presenta un primer conflicto importante y se intenta resolverlo cuando sabremos si se
+                        podrá formar un vínculo de pareja estable o no.
+                    </p>
+                </div>
+
+                <!-- Card 3: Consumos Problemáticos -->
+                <div
+                    class="group bg-brand-lightGray p-10 rounded-xl hover:shadow-2xl hover:bg-brand-beige/30 transition-all duration-300 border border-transparent hover:border-brand-beige">
+                    <div
+                        class="w-16 h-16 bg-brand-beige rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-wine-bottle text-3xl text-brand-dark"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-4 group-hover:text-brand-gold transition-colors">
+                        Consumos Problemáticos</h3>
+                    <p class="text-brand-gray leading-relaxed">
+                        Cuando nos encontramos envueltos en una situación de consumo problemático, en lugar de hacernos
+                        las difíciles preguntas que nos llevan a crecer, a conocernos y a enriquecer nuestra vida,
+                        recurrimos a un hábito que las tapa y “nos alivia”.
+                    </p>
+                </div>
+
+                <!-- Card 4: Proyección Personal -->
+                <div
+                    class="group bg-brand-lightGray p-10 rounded-xl hover:shadow-2xl hover:bg-brand-beige/30 transition-all duration-300 border border-transparent hover:border-brand-beige">
+                    <div
+                        class="w-16 h-16 bg-brand-beige rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-rocket text-3xl text-brand-dark"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-4 group-hover:text-brand-gold transition-colors">
+                        Proyección Personal</h3>
+                    <p class="text-brand-gray leading-relaxed">
+                        No hace falta sufrir un problema psicológico para hacer terapia. Realizar una serie de
+                        encuentros ayuda a formarnos para el disfrute o el autoconocimiento, cual permite acceder a un
+                        desarrollo personal, recreativo, laboral y emocional.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Exterior Desktop -->
-    <div id="exterior" class="container dots__terapia--desktop">
-        <div class="row d-flex justify-content-between align-items-center px-5 text-center">
-            <h2 class="col-lg-12 text-center mt-5">¿Estás lejos de Argentina?</h2>
-            <h3 class="col-lg-12 text-center p-4 mb-5">¡Hacé terapia online!</h3>
+    <!-- Section: Metodología (How I work) -->
+    <section class="py-24 bg-brand-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('assets/img/pattern.png')] bg-repeat"></div>
+        <!-- Optional pattern if available, or just texture -->
 
-            <div class="col-12 col-lg-2">
-                <div
-                    class="col-5 col-lg-12 circleFeature rounded-circle d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-size--secondary text-white fa-house"></i>
-                </div>
-                <h5 class="mt-3 lead">Comodidad</h5>
-            </div>
-
-            <div class="col-12 col-lg-2">
-                <div
-                    class="col-5 col-lg-12 circleFeature rounded-circle d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-size--secondary text-white fa-lock"></i>
-                </div>
-                <h5 class="mt-3 lead">Confidencialidad</h5>
-            </div>
-
-            <div class="col-12 col-lg-2">
-                <div
-                    class="col-5 col-lg-12 circleFeature rounded-circle d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-size--secondary text-white fa-laptop"></i>
-                </div>
-                <h5 class="mt-3 lead">Virtual</h5>
-            </div>
-
-            <div class="col-12 col-lg-2">
-                <div
-                    class="col-5 col-lg-12 circleFeature rounded-circle d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-size--secondary text-white fa-microphone"></i>
-                </div>
-                <h5 class="mt-3 lead">Español</h5>
-            </div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">¿Cómo trabajo?</h2>
+            <p class="text-xl text-brand-beige font-light leading-relaxed">
+                "Mi propuesta inicial es tener tres o cuatro entrevistas en las que me armo una idea general, un mapa de
+                la situación expuesta y luego hago una pequeña devolución en la cual planteo qué entiendo yo qué se
+                podría trabajar y acuerdo esto con quien me consulta, armando juntos un plan de trabajo, metas, plazos
+                objeciones, etc."
+            </p>
         </div>
-    </div>
+    </section>
 
+    <!-- Section: Exterior (Online Therapy) -->
+    <section id="exterior" class="py-24 bg-brand-lightGray relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-2">¿Estás lejos de Argentina?</h2>
+            <h3 class="text-2xl md:text-3xl text-brand-gold font-light mb-16">¡Hacé terapia online!</h3>
 
-    <!-- Exterior Mobile -->
-    <div class="container dots__terapia--mobile">
-        <div class="row d-flex justify-content-center">
-            <div class="col-12 d-flex justify-content-center my-2">
-                <div class="circleFeature rounded-circle d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-size--secondary text-white fa-house"></i>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+                <!-- Feature 1 -->
+                <div class="flex flex-col items-center group">
+                    <div
+                        class="w-32 h-32 bg-brand-beige rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:bg-brand-gold transition-colors duration-300">
+                        <i
+                            class="fa-solid fa-house text-4xl text-brand-dark group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h5 class="text-xl font-medium text-brand-gray">Comodidad</h5>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="flex flex-col items-center group">
+                    <div
+                        class="w-32 h-32 bg-brand-beige rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:bg-brand-gold transition-colors duration-300">
+                        <i
+                            class="fa-solid fa-lock text-4xl text-brand-dark group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h5 class="text-xl font-medium text-brand-gray">Confidencialidad</h5>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="flex flex-col items-center group">
+                    <div
+                        class="w-32 h-32 bg-brand-beige rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:bg-brand-gold transition-colors duration-300">
+                        <i
+                            class="fa-solid fa-laptop text-4xl text-brand-dark group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h5 class="text-xl font-medium text-brand-gray">Virtual</h5>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="flex flex-col items-center group">
+                    <div
+                        class="w-32 h-32 bg-brand-beige rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:bg-brand-gold transition-colors duration-300">
+                        <i
+                            class="fa-solid fa-microphone text-4xl text-brand-dark group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h5 class="text-xl font-medium text-brand-gray">Español</h5>
                 </div>
             </div>
-            <h3 class="text-center mb-2">Comodidad</h3>
 
-            <div class="col-12 d-flex justify-content-center my-2">
-                <div class="circleFeature rounded-circle d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-size--secondary text-white fa-lock"></i>
-                </div>
-            </div>
-            <h3 class="text-center mb-2">Confidencialidad</h3>
-
-            <div class="col-12 d-flex justify-content-center my-2">
-                <div class="circleFeature rounded-circle d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-size--secondary text-white fa-laptop"></i>
-                </div>
-            </div>
-            <h3 class="text-center mb-2">Virtual</h3>
-
-            <div class="col-12 d-flex justify-content-center my-2">
-                <div class="circleFeature rounded-circle d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-size--secondary text-white fa-microphone"></i>
-                </div>
-            </div>
-            <h3 class="text-center mb-2">Español</h3>
-        </div>
-    </div>
-
-    <!-- Boton Contacto -->
-    <div class="container my-3">
-        <div class="row d-flex justify-content-center align-items-center">
-            <button class="col-lg-10 botonBanner--terapia buttonNav--contacto py-3 m-5 text-light"><span>QUIERO EMPEZAR
-                    TERAPIA
-                    ONLINE</span></button>
-        </div>
-    </div>
-
-    <!-- Contacto Desktop-->
-    <section id="contacto" class="contactoCaja contactoCaja--desktop">
-        <h2 class="text-center pt-5 text-white">Contacto</h2>
-        <div class="container">
-            <div class="row d-flex justify-content-left align-items-center p-5">
-                <div class="col-lg-6 contactoCaja--left p-5 lead">
-                    <h3>Datos de contacto</h3>
-                    <p>
-                        <i class="fa-solid fa-location-dot"></i>
-                        San Martin 655, CABA, Argentina
-                    </p>
-                    <p>
-                        <i class="fa-solid fa-envelope"></i>
-                        licpablogiordana@gmail.com
-                    </p>
-                    <p class="text-dark">
-                        <i class="fa-solid fa-phone"></i>
-                        +54 11 6744 3264
-                    </p>
-                    <button class="botonContacto text-light"><span><i class="fa-brands fa-facebook"></i></span></button>
-                    <button class="botonContacto text-light"><span><i
-                                class="fa-brands fa-instagram"></i></span></button>
-                    <a target="_blank"
-                        href="https://www.linkedin.com/in/pablo-giordana-88256414/?originalSubdomain=ar"><button
-                            class="botonContacto text-light"><span><i
-                                    class="fa-brands fa-linkedin"></i></span></button></a>
-                </div>
-            </div>
-            <div class="contactoCaja--right p-5 lead">
-                <h3 class="col-12 ">Escribime por WhatsApp</h3>
-                <p class="col-12">Sabemos que estás en un momento difícil. Por eso, ¡respondemos con rapidez!</p>
-                <a
-                    href="https://api.whatsapp.com/send?phone=541167443264&text=Hola%20Lic.%20Pablo%20Giordana!%20Me%20interesar%C3%ADa%20saber%20m%C3%A1s%20acerca%20de%20">
-                    <button class="botonContacto text-light p-2">
-                        <span class="px-3">
-                            <i class="fa-brands fa-whatsapp fa-xl pr-2"></i>
-                            Ir a WhatsApp
-                        </span>
-                    </button>
+            <div class="mt-20">
+                <a href="#contacto"
+                    class="inline-block px-10 py-4 bg-brand-gold text-white font-bold rounded-lg shadow-lg hover:bg-brand-dark hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 uppercase tracking-wider">
+                    Quiero empezar terapia online
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Contacto Mobile-->
-<div class="container-fluid contactoCaja contactoCaja--mobile pb-5">
+    <!-- Section: Contacto -->
+    <section id="contacto" class="py-24 bg-brand-dark text-white relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16">Contacto</h2>
 
-    <h2 class="text-center pt-5 mb-5 text-white">Contacto</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 shadow-2xl rounded-2xl overflow-hidden">
+                <!-- Contact Info (Left) -->
+                <div class="bg-brand-beige p-12 lg:p-16 text-brand-dark flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold mb-8 border-b-2 border-brand-gold pb-4 inline-block w-full">Datos de
+                        contacto</h3>
 
-    <div class="col-12 mb-5 text-center p-5 lead contactoCaja--left">
-        <h3>Datos de contacto</h3>
-        <p>
-            <i class="fa-solid fa-location-dot"></i>
-            San Martin 655, CABA, Argentina
-        </p>
-        <p>
-            <i class="fa-solid fa-envelope"></i>
-            licpablogiordana@gmail.com
-        </p>
-        <p>
-            <i class="fa-solid fa-phone"></i>
-            +54 11 6744 3264
-        </p>
-        <button class="botonContacto text-light">
-            <span>
-                <i class="fa-brands fa-facebook"></i>
-            </span>
-        </button>
-        <button class="botonContacto text-light">
-            <span>
-                <i class="fa-brands fa-instagram"></i>
-            </span>
-        </button>
-        <a target="_blank" href="https://www.linkedin.com/in/pablo-giordana-88256414/?originalSubdomain=ar">
-            <button class="botonContacto text-light">
-                <span>
-                    <i class="fa-brands fa-linkedin"></i>
-                </span>
-            </button>
-        </a>
-    </div>
-    <div class="col-12 p-5 bg-light text-center lead">
-        <h3 class="col-12 ">Escribime por WhatsApp</h3>
-        <p class="col-12">Sabemos que estás en un momento difícil. Por eso, ¡respondemos con rapidez!</p>
-        <a
-            href="https://api.whatsapp.com/send?phone=541167443264&text=Hola%20Lic.%20Pablo%20Giordana!%20Me%20interesar%C3%ADa%20saber%20m%C3%A1s%20acerca%20de%20">
-            <button class="botonContacto text-light p-2">
-                <span class="px-3">
-                    <i class="fa-brands fa-whatsapp fa-xl pr-2"></i>
-                    Ir a WhatsApp
-                </span>
-            </button>
-        </a>
-    </div>
-</div>
+                    <div class="space-y-6 text-lg">
+                        <a href="https://www.google.com/maps/search/?api=1&query=San+Martin+655,+CABA,+Argentina"
+                            target="_blank"
+                            class="flex items-center hover:text-brand-gold transition-colors duration-300">
+                            <i class="fa-solid fa-location-dot w-8 text-brand-gold text-xl"></i>
+                            <span class="font-medium">San Martin 655, CABA, Argentina</span>
+                        </a>
+                        <a href="mailto:licpablogiordana@gmail.com" target="_blank"
+                            class="flex items-center hover:text-brand-gold transition-colors duration-300">
+                            <i class="fa-solid fa-envelope w-8 text-brand-gold text-xl"></i>
+                            <span class="font-medium">licpablogiordana@gmail.com</span>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=541167443264" target="_blank"
+                            class="flex items-center hover:text-brand-gold transition-colors duration-300">
+                            <i class="fa-solid fa-phone w-8 text-brand-gold text-xl"></i>
+                            <span class="font-medium">+54 11 6744 3264</span>
+                        </a>
+                    </div>
 
+                    <div class="flex space-x-4 mt-10">
+                        <button
+                            class="w-12 h-12 rounded-full bg-transparent border-2 border-brand-gold flex items-center justify-center hover:bg-brand-dark hover:text-white hover:border-brand-dark transition-all duration-300">
+                            <i class="fa-brands fa-facebook text-xl"></i>
+                        </button>
+                        <button
+                            class="w-12 h-12 rounded-full bg-transparent border-2 border-brand-gold flex items-center justify-center hover:bg-brand-dark hover:text-white hover:border-brand-dark transition-all duration-300">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </button>
+                        <a href="https://www.linkedin.com/in/pablo-giordana-88256414/?originalSubdomain=ar"
+                            target="_blank"
+                            class="w-12 h-12 rounded-full bg-transparent border-2 border-brand-gold flex items-center justify-center hover:bg-brand-dark hover:text-white hover:border-brand-dark transition-all duration-300">
+                            <i class="fa-brands fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
 
+                <!-- WhatsApp CTA (Right) -->
+                <div
+                    class="bg-white p-12 lg:p-16 text-brand-dark flex flex-col justify-center relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-green-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50">
+                    </div>
 
+                    <h3 class="text-2xl font-bold mb-4 relative z-10">Escribime por WhatsApp</h3>
+                    <p class="text-brand-gray mb-8 text-lg relative z-10">Sabemos que estás en un momento difícil. Por
+                        eso, ¡respondemos con rapidez!</p>
 
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52532.54788044725!2d-58.423086109121364!3d-34.62225662862947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb008f6bfb39%3A0xae7ebdfaef5d8848!2sPsic%C3%B3logo%20UBA%20-%20Lic.%20Pablo%20Giordana!5e0!3m2!1ses!2sar!4v1644940237837!5m2!1ses!2sar"
-        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-    <div class="container py-5 lead">
-        <div class="row text-center">
-            <div class="col-lg-4">
-                <h4>LIC. PABLO GIORDANA</h4>
-                <p>Consultorio Pedagogico</p>
-            </div>
-            <div class="col-lg-4">
-                <p>Contacto</p>
-                <p>
-                    <i class="fa-solid fa-location-dot"></i>
-                    San Martin 655, CABA, Arg
-                </p>
-                <p>
-                    <i class="fa-solid fa-envelope"></i>
-                    licpablogiordana@gmail.com
-                </p>
-                <p class="text-dark">
-                    <i class="fa-solid fa-phone"></i>
-                    +54 11 6744-3264
-                </p>
-            </div>
-            <div class="col-lg-4">
-                <p>Seguime</p>
-                <button class="botonContacto--footer"><span><i class="fa-brands fa-facebook"></i></span></button>
-                <button class="botonContacto--footer"><span><i class="fa-brands fa-instagram"></i></span></button>
-                <a target="_blank"
-                    href="https://www.linkedin.com/in/pablo-giordana-88256414/?originalSubdomain=ar"><button
-                        class="botonContacto--footer"><span><i class="fa-brands fa-linkedin"></i></span></button></a>
+                    <a href="https://api.whatsapp.com/send?phone=541167443264&text=Hola%20Lic.%20Pablo%20Giordana!%20Me%20interesar%C3%ADa%20saber%20m%C3%A1s%20acerca%20de%20"
+                        target="_blank"
+                        class="relative z-10 inline-flex items-center justify-center px-8 py-4 bg-[#25D366] text-white font-bold rounded-lg shadow-lg hover:bg-[#128C7E] hover:shadow-xl transition-all duration-300 group">
+                        <i class="fa-brands fa-whatsapp text-2xl mr-3 group-hover:scale-110 transition-transform"></i>
+                        Ir a WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
+    </section>
+
+    <!-- Map -->
+    <div class="w-full h-[450px]">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52532.54788044725!2d-58.423086109121364!3d-34.62225662862947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb008f6bfb39%3A0xae7ebdfaef5d8848!2sPsic%C3%B3logo%20UBA%20-%20Lic.%20Pablo%20Giordana!5e0!3m2!1ses!2sar!4v1644940237837!5m2!1ses!2sar"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
-    <footer class="container-fluid py-3 text-light">
-        <div class="row d-flex align-items-center">
-            <p class="pl-5">© Copyright 2021 | Lic. Pablo Giordana</p>
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white pt-16 pb-8 border-t border-brand-gray/20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left mb-12">
+                <!-- Brand -->
+                <div>
+                    <a href="#home">
+                        <h4
+                            class="text-xl font-bold text-brand-beige mb-2 tracking-widest uppercase hover:text-white transition-colors">
+                            LIC. PABLO GIORDANA</h4>
+                    </a>
+                    <p class="text-gray-300">Consultorio Psicológico</p>
+                </div>
+
+                <!-- Contact Footer -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contacto</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li>
+                            <a href="https://www.google.com/maps/search/?api=1&query=San+Martin+655,+CABA,+Argentina"
+                                target="_blank"
+                                class="flex items-center justify-center md:justify-start hover:text-brand-gold transition-colors">
+                                <i class="fa-solid fa-location-dot w-6 text-brand-gold"></i>
+                                San Martin 655, CABA, Arg
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:licpablogiordana@gmail.com" target="_blank"
+                                class="flex items-center justify-center md:justify-start hover:text-brand-gold transition-colors">
+                                <i class="fa-solid fa-envelope w-6 text-brand-gold"></i>
+                                licpablogiordana@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://api.whatsapp.com/send?phone=541167443264" target="_blank"
+                                class="flex items-center justify-center md:justify-start hover:text-brand-gold transition-colors">
+                                <i class="fa-solid fa-phone w-6 text-brand-gold"></i>
+                                +54 11 6744-3264
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Follow/Social -->
+                <div class="flex flex-col items-center md:items-start">
+                    <h4 class="text-lg font-bold mb-6">Seguime</h4>
+                    <div class="flex space-x-4">
+                        <button
+                            class="w-10 h-10 rounded bg-brand-beige text-brand-dark hover:bg-white transition-colors flex items-center justify-center">
+                            <i class="fa-brands fa-facebook"></i>
+                        </button>
+                        <button
+                            class="w-10 h-10 rounded bg-brand-beige text-brand-dark hover:bg-white transition-colors flex items-center justify-center">
+                            <i class="fa-brands fa-instagram"></i>
+                        </button>
+                        <a href="https://www.linkedin.com/in/pablo-giordana-88256414/?originalSubdomain=ar"
+                            target="_blank"
+                            class="w-10 h-10 rounded bg-brand-beige text-brand-dark hover:bg-white transition-colors flex items-center justify-center">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-brand-gray/20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <p>&copy; Copyright 2026 | Lic. Pablo Giordana</p>
+                <p class="mt-4 md:mt-0 flex items-center gap-2">
+                    Desarrollado por
+                    <a href="https://forzalabs.online/" target="_blank"
+                        class="text-brand-beige hover:text-white font-medium transition-colors flex items-center gap-1 group">
+                        Forza Labs
+                    </a>
+                </p>
+            </div>
         </div>
     </footer>
 
-
-    <!-- Script de AOS Animate -->
-
+    <!-- AOS Script -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            once: true,
+            duration: 800,
+            offset: 100,
+        });
     </script>
-
-    <!-- Script de Iconos -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-
-    <!-- Script de Jquery -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
-    <!-- Script de Bootstrap -->
-    <script src="./assets/bootstrap.bundle.min.js"></script>
-
-    <!-- Script de Javascript-->
-    <script src="./assets/js/index.js"></script>
-</body>
 </body>
 
 </html>
